@@ -925,6 +925,81 @@
           padding: 36px 24px;
         }
       }
+
+      /* ── MÍDIA ── */
+      #midia { background: var(--creme); }
+
+      .midia-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+        gap: 24px;
+        margin-top: 48px;
+      }
+
+      .midia-card {
+        text-decoration: none;
+        color: inherit;
+        background: var(--branco);
+        border: 1px solid var(--bege);
+        border-radius: 20px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        transition: transform 0.3s, box-shadow 0.3s;
+        position: relative;
+      }
+      .midia-card::after {
+        content: '';
+        position: absolute;
+        bottom: 0; left: 0; right: 0;
+        height: 3px;
+        background: linear-gradient(90deg, var(--verde), var(--verde-claro));
+        opacity: 0;
+        transition: opacity 0.3s;
+      }
+      .midia-card:hover { transform: translateY(-6px); box-shadow: 0 20px 50px rgba(0,0,0,0.08); }
+      .midia-card:hover::after { opacity: 1; }
+
+      .midia-thumb {
+        width: 100%;
+        aspect-ratio: 4/5;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background: var(--verde);
+        overflow: hidden;
+      }
+      .midia-thumb svg { width: 100%; height: 100%; }
+
+      .midia-info {
+        padding: 20px 20px 24px;
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+      }
+
+      .midia-tag {
+        font-size: 10px;
+        letter-spacing: 2px;
+        text-transform: uppercase;
+        color: var(--ouro);
+        font-weight: 600;
+      }
+
+      .midia-title {
+        font-family: 'Cormorant Garamond', serif;
+        font-size: 1.15rem;
+        font-weight: 600;
+        color: var(--texto);
+        line-height: 1.3;
+      }
+
+      .midia-cta {
+        font-size: 0.82rem;
+        color: var(--verde-claro);
+        font-weight: 500;
+        margin-top: 4px;
+      }
     </style>
   </head>
   <body>
@@ -937,6 +1012,7 @@
       <a href="#primeiros-passos" title="Primeiros Passos"></a>
       <a href="#dicas" title="Dicas"></a>
       <a href="#organizacao" title="Organização"></a>
+      <a href="#midia" title="Materiais & Mídia"></a>
       <a href="#apoio" title="Apoio"></a>
     </nav>
 
@@ -1352,9 +1428,152 @@
       </div>
     </section>
 
+    <!-- ── MÍDIA ── -->
+    <section id="midia">
+      <div class="container">
+        <div class="reveal">
+          <div class="section-label">Página 8</div>
+          <h2 class="section-title">Materiais<br />&amp; Mídia</h2>
+          <p class="section-desc">Acesse os materiais de apoio disponíveis para sua jornada como revendedor.</p>
+        </div>
+        <div class="midia-grid reveal">
+
+          <!-- Card 1: Cartilha Revendedor Boticario -->
+          <a class="midia-card" href="midia/cartilha_revendedor_boticario.pdf" target="_blank" rel="noopener">
+            <div class="midia-thumb">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 220">
+                <defs>
+                  <linearGradient id="bg1" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#1B4332"/>
+                    <stop offset="100%" stop-color="#2D6A4F"/>
+                  </linearGradient>
+                </defs>
+                <rect width="180" height="220" fill="url(#bg1)"/>
+                <!-- Decorative ring — top-right -->
+                <circle cx="160" cy="30" r="70" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="1.5"/>
+                <!-- Gold header line -->
+                <line x1="24" y1="38" x2="156" y2="38" stroke="#C9A84C" stroke-width="1.2"/>
+                <!-- Document icon -->
+                <rect x="62" y="68" width="56" height="70" rx="3" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"/>
+                <polyline points="100,68 100,86 118,86" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"/>
+                <!-- PDF label -->
+                <text x="90" y="158" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" font-weight="600" fill="#C9A84C" letter-spacing="2">PDF</text>
+                <!-- Dot cluster decoration -->
+                <circle cx="38" cy="185" r="2.5" fill="rgba(201,168,76,0.4)"/>
+                <circle cx="47" cy="185" r="2.5" fill="rgba(201,168,76,0.25)"/>
+                <circle cx="56" cy="185" r="2.5" fill="rgba(201,168,76,0.15)"/>
+              </svg>
+            </div>
+            <div class="midia-info">
+              <span class="midia-tag">PDF</span>
+              <h4 class="midia-title">Cartilha Revendedor Boticario</h4>
+              <span class="midia-cta">Abrir documento ↗</span>
+            </div>
+          </a>
+
+          <!-- Card 2: Bem-Vindo(a) à Venda Direta do Grupo Boticario -->
+          <a class="midia-card" href="midia/Bem-vindoa-a-Venda-Direta-do-Grupo-Boticario.pdf" target="_blank" rel="noopener">
+            <div class="midia-thumb">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 220">
+                <defs>
+                  <linearGradient id="bg2" x1="0" y1="1" x2="1" y2="0">
+                    <stop offset="0%" stop-color="#1B4332"/>
+                    <stop offset="100%" stop-color="#2D6A4F"/>
+                  </linearGradient>
+                </defs>
+                <rect width="180" height="220" fill="url(#bg2)"/>
+                <!-- Decorative ring — bottom-left -->
+                <circle cx="20" cy="200" r="80" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="1.5"/>
+                <!-- Gold header line -->
+                <line x1="24" y1="38" x2="156" y2="38" stroke="#C9A84C" stroke-width="1.2"/>
+                <!-- Document icon -->
+                <rect x="62" y="68" width="56" height="70" rx="3" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"/>
+                <polyline points="100,68 100,86 118,86" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"/>
+                <!-- PDF label -->
+                <text x="90" y="158" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" font-weight="600" fill="#C9A84C" letter-spacing="2">PDF</text>
+                <!-- Small diamond decoration -->
+                <polygon points="142,180 148,186 142,192 136,186" fill="none" stroke="rgba(201,168,76,0.4)" stroke-width="1.2"/>
+              </svg>
+            </div>
+            <div class="midia-info">
+              <span class="midia-tag">PDF</span>
+              <h4 class="midia-title">Bem-Vindo(a) à Venda Direta do Grupo Boticario</h4>
+              <span class="midia-cta">Abrir documento ↗</span>
+            </div>
+          </a>
+
+          <!-- Card 3: Guia de Sucesso Grupo Boticário -->
+          <a class="midia-card" href="midia/Guia_de_Sucesso_Grupo_Boticário.pdf" target="_blank" rel="noopener">
+            <div class="midia-thumb">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 220">
+                <defs>
+                  <linearGradient id="bg3" x1="0" y1="0" x2="1" y2="1">
+                    <stop offset="0%" stop-color="#1B4332"/>
+                    <stop offset="100%" stop-color="#2D6A4F"/>
+                  </linearGradient>
+                </defs>
+                <rect width="180" height="220" fill="url(#bg3)"/>
+                <!-- Two decorative rings -->
+                <circle cx="150" cy="40" r="60" fill="none" stroke="rgba(201,168,76,0.15)" stroke-width="1.5"/>
+                <circle cx="30" cy="190" r="55" fill="none" stroke="rgba(201,168,76,0.10)" stroke-width="1"/>
+                <!-- Gold header line -->
+                <line x1="24" y1="38" x2="156" y2="38" stroke="#C9A84C" stroke-width="1.2"/>
+                <!-- Document icon -->
+                <rect x="62" y="68" width="56" height="70" rx="3" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"/>
+                <polyline points="100,68 100,86 118,86" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"/>
+                <!-- PDF label -->
+                <text x="90" y="158" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" font-weight="600" fill="#C9A84C" letter-spacing="2">PDF</text>
+                <!-- Diagonal line decoration -->
+                <line x1="28" y1="175" x2="58" y2="200" stroke="rgba(201,168,76,0.3)" stroke-width="1.2"/>
+              </svg>
+            </div>
+            <div class="midia-info">
+              <span class="midia-tag">PDF</span>
+              <h4 class="midia-title">Guia de Sucesso Grupo Boticário</h4>
+              <span class="midia-cta">Abrir documento ↗</span>
+            </div>
+          </a>
+
+          <!-- Card 4: Guia de Sucesso Multimarcas -->
+          <a class="midia-card" href="midia/Guia_de_Sucesso_Multimarcas.pdf" target="_blank" rel="noopener">
+            <div class="midia-thumb">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 220">
+                <defs>
+                  <linearGradient id="bg4" x1="1" y1="0" x2="0" y2="1">
+                    <stop offset="0%" stop-color="#1B4332"/>
+                    <stop offset="100%" stop-color="#2D6A4F"/>
+                  </linearGradient>
+                </defs>
+                <rect width="180" height="220" fill="url(#bg4)"/>
+                <!-- No large ring — clean look -->
+                <!-- Gold header line -->
+                <line x1="24" y1="38" x2="156" y2="38" stroke="#C9A84C" stroke-width="1.2"/>
+                <!-- Document icon -->
+                <rect x="62" y="68" width="56" height="70" rx="3" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"/>
+                <polyline points="100,68 100,86 118,86" fill="none" stroke="rgba(255,255,255,0.9)" stroke-width="1.5"/>
+                <!-- PDF label -->
+                <text x="90" y="158" text-anchor="middle" font-family="DM Sans, sans-serif" font-size="11" font-weight="600" fill="#C9A84C" letter-spacing="2">PDF</text>
+                <!-- Scattered dot cluster — bottom right -->
+                <circle cx="130" cy="182" r="2.5" fill="rgba(201,168,76,0.15)"/>
+                <circle cx="139" cy="177" r="2.5" fill="rgba(201,168,76,0.25)"/>
+                <circle cx="148" cy="182" r="2.5" fill="rgba(201,168,76,0.4)"/>
+                <circle cx="139" cy="187" r="2.5" fill="rgba(201,168,76,0.25)"/>
+              </svg>
+            </div>
+            <div class="midia-info">
+              <span class="midia-tag">PDF</span>
+              <h4 class="midia-title">Guia de Sucesso Multimarcas</h4>
+              <span class="midia-cta">Abrir documento ↗</span>
+            </div>
+          </a>
+
+        </div>
+      </div>
+    </section>
+
     <!-- ── APOIO ── -->
     <section id="apoio">
-      <div class="section-label">Página 8</div>
+      <div class="section-label">Página 9</div>
       <h2 class="section-title">Onde buscar<br />apoio</h2>
       <p class="section-desc">Você nunca está sozinho(a) nessa jornada.</p>
       <div class="apoio-cards reveal">
