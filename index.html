@@ -4,6 +4,8 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cartilha do Revendedor – Grupo Boticário</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
       href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;600;700&family=DM+Sans:wght@300;400;500;600&display=swap"
       rel="stylesheet"
@@ -636,9 +638,7 @@
         display: flex;
         gap: 24px;
         width: 100%;
-        max-width: 860px;
         align-items: stretch;
-        margin: 0 auto;
       }
 
       .apoio-box {
@@ -706,36 +706,6 @@
       }
       .apoio-btn:hover {
         opacity: 0.88;
-      }
-
-      .apoio-wpp-btn {
-        display: inline-flex;
-        align-items: center;
-        gap: 8px;
-        background: var(--verde-med);
-        color: var(--branco);
-        font-family: "DM Sans", sans-serif;
-        font-weight: 600;
-        font-size: 0.9rem;
-        letter-spacing: 0.5px;
-        padding: 15px 28px;
-        border-radius: 50px;
-        border: none;
-        cursor: pointer;
-        text-decoration: none;
-        transition:
-          transform 0.2s,
-          box-shadow 0.2s;
-        margin-left: 12px;
-      }
-      .apoio-wpp-btn:hover {
-        transform: translateY(-2px);
-        box-shadow: 0 12px 32px rgba(27, 67, 50, 0.45);
-      }
-      .apoio-wpp-btn svg {
-        width: 18px;
-        height: 18px;
-        flex-shrink: 0;
       }
 
       /* ── MODAL ── */
@@ -863,10 +833,6 @@
       @media (max-width: 520px) {
         .modal-card {
           padding: 32px 20px 28px;
-        }
-        .apoio-wpp-btn {
-          margin-left: 0;
-          margin-top: 12px;
         }
       }
 
@@ -1000,6 +966,26 @@
         font-weight: 500;
         margin-top: 4px;
       }
+
+      /* ── BOTIDICA ── */
+      .botidica {
+        border-radius: 14px;
+        padding: 20px 28px;
+        font-size: 0.9rem;
+        display: flex;
+        align-items: center;
+        gap: 14px;
+      }
+      .botidica--light {
+        background: #f0faf5;
+        border: 1px solid #b7e4c7;
+        color: #1b4332;
+      }
+      .botidica--dark {
+        background: rgba(82, 183, 136, 0.12);
+        border: 1px solid rgba(82, 183, 136, 0.3);
+        color: #b7e4c7;
+      }
     </style>
   </head>
   <body>
@@ -1066,21 +1052,7 @@
             <p>Cuidado e amor pelos pets</p>
           </div>
         </div>
-        <div
-          class="reveal"
-          style="
-            margin-top: 36px;
-            background: #f0faf5;
-            border: 1px solid #b7e4c7;
-            border-radius: 14px;
-            padding: 20px 28px;
-            font-size: 0.9rem;
-            color: #1b4332;
-            display: flex;
-            align-items: center;
-            gap: 14px;
-          "
-        >
+        <div class="reveal botidica botidica--light" style="margin-top: 36px">
           <span style="font-size: 1.4rem">💡</span>
           <span
             ><strong>BotiDica:</strong> conhecer bem as marcas ajuda você a
@@ -1208,21 +1180,7 @@
             </div>
           </div>
         </div>
-        <div
-          class="reveal"
-          style="
-            margin-top: 28px;
-            background: #f0faf5;
-            border: 1px solid #b7e4c7;
-            border-radius: 14px;
-            padding: 20px 28px;
-            font-size: 0.9rem;
-            color: #1b4332;
-            display: flex;
-            gap: 14px;
-            align-items: center;
-          "
-        >
+        <div class="reveal botidica botidica--light" style="margin-top: 28px">
           <span style="font-size: 1.4rem">💡</span>
           <span
             ><strong>BotiDica:</strong> quanto mais você conhece os produtos e
@@ -1361,21 +1319,7 @@
             </p>
           </div>
         </div>
-        <div
-          class="reveal"
-          style="
-            margin-top: 28px;
-            background: rgba(82, 183, 136, 0.12);
-            border: 1px solid rgba(82, 183, 136, 0.3);
-            border-radius: 14px;
-            padding: 20px 28px;
-            font-size: 0.9rem;
-            color: #b7e4c7;
-            display: flex;
-            gap: 14px;
-            align-items: center;
-          "
-        >
+        <div class="reveal botidica botidica--dark" style="margin-top: 28px">
           <span style="font-size: 1.4rem">💡</span>
           <span
             ><strong>BotiDica:</strong> vender bem é conhecer o cliente, se
@@ -1439,7 +1383,7 @@
         <div class="midia-grid reveal">
 
           <!-- Card 1: Cartilha Revendedor Boticario -->
-          <a class="midia-card" href="midia/cartilha_revendedor_boticario.pdf" target="_blank" rel="noopener">
+          <a class="midia-card" href="midia/cartilha-revendedor-boticario.pdf" target="_blank" rel="noopener noreferrer">
             <div class="midia-thumb">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 220">
                 <defs>
@@ -1472,7 +1416,7 @@
           </a>
 
           <!-- Card 2: Bem-Vindo(a) à Venda Direta do Grupo Boticario -->
-          <a class="midia-card" href="midia/Bem-vindoa-a-Venda-Direta-do-Grupo-Boticario.pdf" target="_blank" rel="noopener">
+          <a class="midia-card" href="midia/bem-vinda-venda-direta-grupo-boticario.pdf" target="_blank" rel="noopener noreferrer">
             <div class="midia-thumb">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 220">
                 <defs>
@@ -1503,7 +1447,7 @@
           </a>
 
           <!-- Card 3: Guia de Sucesso Grupo Boticário -->
-          <a class="midia-card" href="midia/Guia_de_Sucesso_Grupo_Boticário.pdf" target="_blank" rel="noopener">
+          <a class="midia-card" href="midia/guia-de-sucesso-grupo-boticario.pdf" target="_blank" rel="noopener noreferrer">
             <div class="midia-thumb">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 220">
                 <defs>
@@ -1535,7 +1479,7 @@
           </a>
 
           <!-- Card 4: Guia de Sucesso Multimarcas -->
-          <a class="midia-card" href="midia/Guia_de_Sucesso_Multimarcas.pdf" target="_blank" rel="noopener">
+          <a class="midia-card" href="midia/guia-de-sucesso-multimarcas.pdf" target="_blank" rel="noopener noreferrer">
             <div class="midia-thumb">
               <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 220">
                 <defs>
@@ -1573,6 +1517,7 @@
 
     <!-- ── APOIO ── -->
     <section id="apoio">
+      <div class="container">
       <div class="section-label">Página 9</div>
       <h2 class="section-title">Onde buscar<br />apoio</h2>
       <p class="section-desc">Você nunca está sozinho(a) nessa jornada.</p>
@@ -1619,6 +1564,7 @@
             Ir para o WhatsApp
           </button>
         </div>
+      </div>
       </div>
     </section>
 
