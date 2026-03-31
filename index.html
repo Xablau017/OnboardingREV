@@ -4,16 +4,17 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cartilha do Revendedor – Grupo Maria Cristina</title>
+    <link rel="icon" type="image/png" href="midia/GMC/ASSINATURAS/maria-cristina_simbolo_dourado/maria-cristina_simbolo_dourado.png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;0,700;1,400&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
     <style>
       :root {
-        --verde: #1B2847;
-        --verde-med: #2D5C45;
-        --verde-claro: #8FAF9F;
-        --ouro: #B8A040;
-        --ouro-claro: #D4BC5A;
+        --verde: #1A2C42;
+        --verde-med: #275248;
+        --verde-claro: #97B9A3;
+        --ouro: #D5B038;
+        --ouro-claro: #E2C874;
         --creme: #faf7f2;
         --bege: #ede8df;
         --texto: #1a1a1a;
@@ -835,6 +836,14 @@
       }
 
       /* ── FOOTER ── */
+      .footer-logo {
+        height: 32px;
+        width: auto;
+        margin-bottom: 12px;
+        opacity: 0.7;
+        filter: brightness(0) invert(1);
+      }
+
       footer {
         background: #0d2a1e;
         padding: 40px;
@@ -985,21 +994,13 @@
         color: #b7e4c7;
       }
 
-      .hero-watermark {
-        position: absolute;
-        top: 50%;
-        left: 50%;
-        transform: translate(-50%, -50%);
-        font-family: 'Cormorant Garamond', serif;
-        font-size: clamp(5rem, 14vw, 11rem);
-        font-weight: 300;
-        font-style: italic;
-        color: rgba(255, 255, 255, 0.06);
-        white-space: nowrap;
-        pointer-events: none;
-        user-select: none;
-        z-index: 0;
-        letter-spacing: 4px;
+      .mc-logo-header {
+        height: 72px;
+        width: auto;
+        margin-bottom: 32px;
+        animation: fadeUp 0.8s ease both;
+        position: relative;
+        z-index: 1;
       }
 
       .hero-badge,
@@ -1027,7 +1028,11 @@
 
     <!-- ── HERO ── -->
     <section class="hero" id="hero">
-      <span class="hero-watermark" aria-hidden="true">Maria Cristina</span>
+      <img
+        src="midia/GMC/ASSINATURAS/horizontal_monocromatico_dourado/maria-cristina_horizontal_monocromatico-dourado.svg"
+        alt="Grupo Maria Cristina"
+        class="mc-logo-header"
+      >
       <div class="hero-badge">Grupo Maria Cristina · Espaço do Revendedor</div>
       <h1>Seja muito<br /><em>bem-vindo(a)</em></h1>
       <p>
@@ -1665,6 +1670,12 @@
 
     <!-- ── FOOTER ── -->
     <footer>
+      <img
+        src="midia/GMC/ASSINATURAS/maria-cristina_simbolo_dourado/maria-cristina_simbolo_dourado.svg"
+        alt="Grupo Maria Cristina"
+        class="footer-logo"
+      >
+      <br>
       Grupo Maria Cristina · Espaço do Revendedor · Grupo Boticário
     </footer>
 
