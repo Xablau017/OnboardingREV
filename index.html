@@ -248,7 +248,11 @@
         border-radius: 20px;
         padding: 32px 24px;
         text-align: center;
-        transition: transform 0.3s, box-shadow 0.3s, border-left-color 0.3s, background 0.3s;
+        transition:
+          transform 0.3s,
+          box-shadow 0.3s,
+          border-left-color 0.3s,
+          background 0.3s;
         position: relative;
         overflow: hidden;
         cursor: default;
@@ -258,17 +262,37 @@
         box-shadow: 0 20px 50px rgba(0, 0, 0, 0.08);
       }
 
-      .brand-card.boticario { border-left-color: #1B4332; }
-      .brand-card.eudora    { border-left-color: #6B2D5E; }
-      .brand-card.qdb       { border-left-color: #D94F3D; }
-      .brand-card.oui       { border-left-color: #1A1A1A; }
-      .brand-card.aumigos   { border-left-color: #E07820; }
+      .brand-card.boticario {
+        border-left-color: #1b4332;
+      }
+      .brand-card.eudora {
+        border-left-color: #6b2d5e;
+      }
+      .brand-card.qdb {
+        border-left-color: #d94f3d;
+      }
+      .brand-card.oui {
+        border-left-color: #1a1a1a;
+      }
+      .brand-card.aumigos {
+        border-left-color: #e07820;
+      }
 
-      .brand-card.boticario:hover { background: #F0FAF4; }
-      .brand-card.eudora:hover    { background: #FAF0F8; }
-      .brand-card.qdb:hover       { background: #FFF0EF; }
-      .brand-card.oui:hover       { background: #F5F3F0; }
-      .brand-card.aumigos:hover   { background: #FFF5E8; }
+      .brand-card.boticario:hover {
+        background: #f0faf4;
+      }
+      .brand-card.eudora:hover {
+        background: #faf0f8;
+      }
+      .brand-card.qdb:hover {
+        background: #fff0ef;
+      }
+      .brand-card.oui:hover {
+        background: #f5f3f0;
+      }
+      .brand-card.aumigos:hover {
+        background: #fff5e8;
+      }
 
       .brand-icon {
         width: 52px;
@@ -280,11 +304,21 @@
         font-size: 22px;
         margin: 0 auto 16px;
       }
-      .boticario .brand-icon { background: #C8E6D0; }
-      .eudora .brand-icon    { background: #E8C8E2; }
-      .qdb .brand-icon       { background: #FAC8C3; }
-      .oui .brand-icon       { background: #D8D4CE; }
-      .aumigos .brand-icon   { background: #FFD9A8; }
+      .boticario .brand-icon {
+        background: #c8e6d0;
+      }
+      .eudora .brand-icon {
+        background: #e8c8e2;
+      }
+      .qdb .brand-icon {
+        background: #fac8c3;
+      }
+      .oui .brand-icon {
+        background: #d8d4ce;
+      }
+      .aumigos .brand-icon {
+        background: #ffd9a8;
+      }
 
       .brand-card h3 {
         font-family: "Cormorant Garamond", serif;
@@ -292,11 +326,21 @@
         font-weight: 600;
         margin-bottom: 8px;
       }
-      .brand-card.boticario h3 { color: #1B4332; }
-      .brand-card.eudora h3    { color: #6B2D5E; }
-      .brand-card.qdb h3       { color: #D94F3D; }
-      .brand-card.oui h3       { color: #1A1A1A; }
-      .brand-card.aumigos h3   { color: #E07820; }
+      .brand-card.boticario h3 {
+        color: #1b4332;
+      }
+      .brand-card.eudora h3 {
+        color: #6b2d5e;
+      }
+      .brand-card.qdb h3 {
+        color: #d94f3d;
+      }
+      .brand-card.oui h3 {
+        color: #1a1a1a;
+      }
+      .brand-card.aumigos h3 {
+        color: #e07820;
+      }
       .brand-card p {
         font-size: 0.82rem;
         color: var(--texto-leve);
@@ -679,25 +723,25 @@
       }
 
       .apoio-btn-android {
-        background: #01875F;
+        background: #01875f;
         color: #fff;
         border: none;
       }
       .apoio-btn-android:hover {
-        background: #016E4E;
+        background: #016e4e;
         transform: translateY(-2px);
-        box-shadow: 0 12px 32px rgba(1,135,95,0.35);
+        box-shadow: 0 12px 32px rgba(1, 135, 95, 0.35);
       }
 
       .apoio-btn-ios {
-        background: #1A1A1A;
+        background: #1a1a1a;
         color: #fff;
         border: none;
       }
       .apoio-btn-ios:hover {
-        background: #01875F;
+        background: #01875f;
         transform: translateY(-2px);
-        box-shadow: 0 12px 32px rgba(1,135,95,0.35);
+        box-shadow: 0 12px 32px rgba(1, 135, 95, 0.35);
       }
 
       .apoio-box .app-btns,
@@ -968,15 +1012,35 @@
       .midia-thumb {
         width: 100%;
         aspect-ratio: 4/5;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        background: var(--verde);
         overflow: hidden;
+        position: relative;
+        background: var(--verde);
       }
-      .midia-thumb svg {
+      .midia-thumb-img {
         width: 100%;
         height: 100%;
+        object-fit: cover;
+        object-position: center top;
+        display: block;
+        transition: transform 0.4s ease;
+      }
+      .midia-card:hover .midia-thumb-img {
+        transform: scale(1.04);
+      }
+      .midia-thumb::after {
+        content: "";
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 60%;
+        background: linear-gradient(
+          to bottom,
+          rgba(27, 40, 71, 0) 0%,
+          rgba(27, 40, 71, 0.7) 100%
+        );
+        pointer-events: none;
+        z-index: 1;
       }
 
       .midia-info {
@@ -1068,7 +1132,7 @@
         alt="Grupo Maria Cristina"
         class="mc-logo-header"
       />
-      <div class="hero-badge">Grupo Maria Cristina · Espaço do Revendedor</div>
+      <div class="hero-badge">Grupo Maria Cristina · Venda Direta</div>
       <h1>Seja muito<br /><em>bem-vindo(a)</em></h1>
       <p>
         Esta cartilha foi criada para te apresentar, de forma simples, como
@@ -1456,32 +1520,12 @@
             rel="noopener noreferrer"
           >
             <div class="midia-thumb">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 340">
-                <defs>
-                  <linearGradient id="midia-grad-1" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#1B2847" />
-                    <stop offset="100%" stop-color="#2D5C45" />
-                  </linearGradient>
-                </defs>
-                <!-- Layer 1: Background -->
-                <rect width="280" height="340" fill="url(#midia-grad-1)" />
-                <!-- Layer 2: Texture circles -->
-                <circle cx="240" cy="40" r="180" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />
-                <circle cx="40" cy="300" r="120" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />
-                <!-- Layer 3: Gold rule with diamond -->
-                <line x1="32" y1="64" x2="248" y2="64" stroke="#B8A040" stroke-width="2" />
-                <rect x="244" y="60" width="8" height="8" fill="#B8A040" transform="rotate(45 248 64)" />
-                <!-- Layer 4: Document icon with folded corner -->
-                <polygon points="100,110 160,110 180,130 180,210 100,210" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" />
-                <polygon points="160,110 160,130 180,130" fill="rgba(255,255,255,0.15)" />
-                <!-- Layer 5: PDF badge -->
-                <rect x="112" y="282" width="56" height="24" rx="4" fill="#B8A040" />
-                <text x="140" y="299" text-anchor="middle" font-family="Lato, sans-serif" font-size="11" font-weight="700" fill="#fff" letter-spacing="2">PDF</text>
-                <!-- Layer 6: Text lines accent -->
-                <line x1="110" y1="230" x2="190" y2="230" stroke="rgba(255,255,255,0.3)" stroke-width="2" />
-                <line x1="110" y1="242" x2="170" y2="242" stroke="rgba(255,255,255,0.3)" stroke-width="2" />
-                <line x1="110" y1="254" x2="180" y2="254" stroke="rgba(255,255,255,0.3)" stroke-width="2" />
-              </svg>
+              <img
+                src="midia/PDFpics/Image1.jpeg"
+                alt="Cartilha Revendedor Boticario"
+                class="midia-thumb-img"
+                loading="lazy"
+              />
             </div>
             <div class="midia-info">
               <span class="midia-tag">PDF</span>
@@ -1498,30 +1542,12 @@
             rel="noopener noreferrer"
           >
             <div class="midia-thumb">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 340">
-                <defs>
-                  <linearGradient id="midia-grad-2" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#2D5C45" />
-                    <stop offset="100%" stop-color="#B8A040" />
-                  </linearGradient>
-                </defs>
-                <!-- Layer 1: Background -->
-                <rect width="280" height="340" fill="url(#midia-grad-2)" />
-                <!-- Layer 2: Texture circles -->
-                <circle cx="240" cy="40" r="180" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />
-                <circle cx="40" cy="300" r="120" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />
-                <!-- Layer 3: Gold rule with diamond -->
-                <line x1="32" y1="64" x2="248" y2="64" stroke="#B8A040" stroke-width="2" />
-                <rect x="244" y="60" width="8" height="8" fill="#B8A040" transform="rotate(45 248 64)" />
-                <!-- Layer 4: Document icon with folded corner -->
-                <polygon points="100,110 160,110 180,130 180,210 100,210" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" />
-                <polygon points="160,110 160,130 180,130" fill="rgba(255,255,255,0.15)" />
-                <!-- Layer 5: PDF badge -->
-                <rect x="112" y="282" width="56" height="24" rx="4" fill="#B8A040" />
-                <text x="140" y="299" text-anchor="middle" font-family="Lato, sans-serif" font-size="11" font-weight="700" fill="#fff" letter-spacing="2">PDF</text>
-                <!-- Layer 6: Compass/star accent -->
-                <polygon points="40,100 43,93 46,100 53,97 48,103 53,109 46,106 43,113 40,106 33,109 38,103 33,97" fill="#B8A040" />
-              </svg>
+              <img
+                src="midia/PDFpics/Image2.jpeg"
+                alt="Bem-Vindo(a) à Venda Direta do Grupo Boticario"
+                class="midia-thumb-img"
+                loading="lazy"
+              />
             </div>
             <div class="midia-info">
               <span class="midia-tag">PDF</span>
@@ -1540,31 +1566,12 @@
             rel="noopener noreferrer"
           >
             <div class="midia-thumb">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 340">
-                <defs>
-                  <linearGradient id="midia-grad-3" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#1B2847" />
-                    <stop offset="100%" stop-color="#2D5C45" />
-                  </linearGradient>
-                </defs>
-                <!-- Layer 1: Background -->
-                <rect width="280" height="340" fill="url(#midia-grad-3)" />
-                <!-- Layer 2: Texture circles -->
-                <circle cx="240" cy="40" r="180" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />
-                <circle cx="40" cy="300" r="120" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />
-                <!-- Layer 3: Gold rule with diamond -->
-                <line x1="32" y1="64" x2="248" y2="64" stroke="#B8A040" stroke-width="2" />
-                <rect x="244" y="60" width="8" height="8" fill="#B8A040" transform="rotate(45 248 64)" />
-                <!-- Layer 4: Document icon with folded corner -->
-                <polygon points="100,110 160,110 180,130 180,210 100,210" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" />
-                <polygon points="160,110 160,130 180,130" fill="rgba(255,255,255,0.15)" />
-                <!-- Layer 5: PDF badge -->
-                <rect x="112" y="282" width="56" height="24" rx="4" fill="#B8A040" />
-                <text x="140" y="299" text-anchor="middle" font-family="Lato, sans-serif" font-size="11" font-weight="700" fill="#fff" letter-spacing="2">PDF</text>
-                <!-- Layer 6: Bookmark ribbon accent -->
-                <line x1="50" y1="100" x2="50" y2="200" stroke="#B8A040" stroke-width="2" />
-                <circle cx="50" cy="206" r="4" fill="#B8A040" />
-              </svg>
+              <img
+                src="midia/PDFpics/Image3.jpeg"
+                alt="Guia de Sucesso Grupo Boticário"
+                class="midia-thumb-img"
+                loading="lazy"
+              />
             </div>
             <div class="midia-info">
               <span class="midia-tag">PDF</span>
@@ -1581,33 +1588,12 @@
             rel="noopener noreferrer"
           >
             <div class="midia-thumb">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 280 340">
-                <defs>
-                  <linearGradient id="midia-grad-4" x1="0" y1="0" x2="1" y2="1">
-                    <stop offset="0%" stop-color="#2D5C45" />
-                    <stop offset="100%" stop-color="#B8A040" />
-                  </linearGradient>
-                </defs>
-                <!-- Layer 1: Background -->
-                <rect width="280" height="340" fill="url(#midia-grad-4)" />
-                <!-- Layer 2: Texture circles -->
-                <circle cx="240" cy="40" r="180" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />
-                <circle cx="40" cy="300" r="120" fill="none" stroke="rgba(255,255,255,0.06)" stroke-width="1.5" />
-                <!-- Layer 3: Gold rule with diamond -->
-                <line x1="32" y1="64" x2="248" y2="64" stroke="#B8A040" stroke-width="2" />
-                <rect x="244" y="60" width="8" height="8" fill="#B8A040" transform="rotate(45 248 64)" />
-                <!-- Layer 4: Document icon with folded corner -->
-                <polygon points="100,110 160,110 180,130 180,210 100,210" fill="rgba(255,255,255,0.08)" stroke="rgba(255,255,255,0.9)" stroke-width="1.5" />
-                <polygon points="160,110 160,130 180,130" fill="rgba(255,255,255,0.15)" />
-                <!-- Layer 5: PDF badge -->
-                <rect x="112" y="282" width="56" height="24" rx="4" fill="#B8A040" />
-                <text x="140" y="299" text-anchor="middle" font-family="Lato, sans-serif" font-size="11" font-weight="700" fill="#fff" letter-spacing="2">PDF</text>
-                <!-- Layer 6: 2x2 dot grid accent -->
-                <circle cx="210" cy="240" r="3.5" fill="rgba(255,255,255,0.4)" />
-                <circle cx="224" cy="240" r="3.5" fill="rgba(255,255,255,0.4)" />
-                <circle cx="210" cy="254" r="3.5" fill="rgba(255,255,255,0.4)" />
-                <circle cx="224" cy="254" r="3.5" fill="rgba(255,255,255,0.4)" />
-              </svg>
+              <img
+                src="midia/PDFpics/Image4.jpeg"
+                alt="Guia de Sucesso Multimarcas"
+                class="midia-thumb-img"
+                loading="lazy"
+              />
             </div>
             <div class="midia-info">
               <span class="midia-tag">PDF</span>
@@ -1629,28 +1615,46 @@
           <!-- Card 0: App do Revendedor -->
           <div class="apoio-box">
             <div class="big-icon">
-              <svg xmlns="http://www.w3.org/2000/svg"
-                   viewBox="0 0 52 52" width="52" height="52">
-                <rect width="52" height="52" rx="12" fill="#1B2847"/>
-                <text x="26" y="36" font-family="sans-serif" font-size="26"
-                      text-anchor="middle" fill="white">📱</text>
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                viewBox="0 0 52 52"
+                width="52"
+                height="52"
+              >
+                <rect width="52" height="52" rx="12" fill="#1B2847" />
+                <text
+                  x="26"
+                  y="36"
+                  font-family="sans-serif"
+                  font-size="26"
+                  text-anchor="middle"
+                  fill="white"
+                >
+                  📱
+                </text>
               </svg>
             </div>
             <h3>App do Revendedor</h3>
-            <p>Acesse o aplicativo oficial para acompanhar pedidos,
-               oportunidades e organizar sua rotina de vendas.</p>
+            <p>
+              Acesse o aplicativo oficial para acompanhar pedidos, oportunidades
+              e organizar sua rotina de vendas.
+            </p>
             <div class="app-btns">
-              <a href="https://play.google.com/store/apps/details?id=br.com.grupoboticario.boticariorepresentante"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 class="apoio-btn apoio-btn-android">
+              <a
+                href="https://play.google.com/store/apps/details?id=br.com.grupoboticario.boticariorepresentante"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="apoio-btn apoio-btn-android"
+              >
                 ▶ Google Play
               </a>
-              <a href="https://apps.apple.com/br/app/revendedores-grupo-botic%C3%A1rio/id1465675800"
-                 target="_blank"
-                 rel="noopener noreferrer"
-                 class="apoio-btn apoio-btn-ios">
-                 Apple Store
+              <a
+                href="https://apps.apple.com/br/app/revendedores-grupo-botic%C3%A1rio/id1465675800"
+                target="_blank"
+                rel="noopener noreferrer"
+                class="apoio-btn apoio-btn-ios"
+              >
+                Apple Store
               </a>
             </div>
           </div>
