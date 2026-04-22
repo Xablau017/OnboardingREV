@@ -2028,15 +2028,15 @@
           <div class="form-group">
             <label for="wppCidade">Cidade</label>
             <select id="wppCidade" name="cidade" required>
-              <option value="" disabled selected>Selecione sua base</option>
-              <option value="Cianorte">Cianorte</option>
+              <option value="" disabled selected>Selecione sua cidade</option>
+              <option value="Terra Rica">Terra Rica</option>
+              <option value="Goioerê">Goioerê</option>
+              <option value="Umuarama">Umuarama</option>
+              <option value="Paranavaí">Paranavaí</option>
+              <option value="Paiçandu">Paiçandu</option>
               <option value="Mandaguaçu">Mandaguaçu</option>
               <option value="Marialva">Marialva</option>
-              <option value="Maringá">Maringá</option>
-              <option value="Paranavaí">Paranavaí</option>
-              <option value="Terra Rica">Terra Rica</option>
-              <option value="Umuarama">Umuarama</option>
-              <option value="Outro">Outro</option>
+              <option value="Mandaguari">Mandaguari</option>
             </select>
           </div>
           <div class="form-group">
@@ -2119,14 +2119,14 @@
 
       // ── MODAL WHATSAPP ──
       const cidadeWhatsApp = {
-        Marialva: "5544991249988",
-        Paranavaí: "5544991249988",
-        Mandaguaçu: "5544991249988",
-        Maringá: "5544991249988",
-        Umuarama: "5544991249988",
-        "Terra Rica": "5544991249988",
-        Cianorte: "5544991249988",
-        Outro: "5544991249988",
+        "Terra Rica":   "5544991572821",
+        "Goioerê":      "5544999745241",
+        "Umuarama":     "5544988213022",
+        "Paranavaí":    ["5544991751885", "5544988163174"],
+        "Paiçandu":     "5544984331268",
+        "Mandaguaçu":   "5544999489021",
+        "Marialva":     "5544999254954",
+        "Mandaguari":   "5544984334721"
       };
 
       const modalWpp = document.getElementById("modalWpp");
@@ -2189,7 +2189,10 @@
         if (!nome || !contato || !cidade) return;
 
         const mensagem = `Olá! Vim pela Cartilha do Revendedor 📋\nNome: ${nome}\nContato: ${contato}\nCidade: ${cidade}${obs ? "\nObservação: " + obs : ""}`;
-        const numero = cidadeWhatsApp[cidade] || cidadeWhatsApp["Outro"];
+        const entrada = cidadeWhatsApp[cidade];
+        const numero = Array.isArray(entrada)
+          ? entrada[Math.floor(Math.random() * entrada.length)]
+          : entrada;
         const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 
         window.open(url, "_blank", "noopener,noreferrer");
