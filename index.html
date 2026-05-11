@@ -1189,6 +1189,80 @@
           gap: 16px;
         }
       }
+
+      .cta-boticario {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 24px;
+        padding: 40px 0;
+      }
+
+      .cta-boticario-btn {
+        margin-top: 16px;
+        font-size: 1.1rem;
+        padding: 18px 48px;
+      }
+
+      .cta-boticario-btn:hover {
+        transform: translateY(-3px);
+        box-shadow: 0 16px 40px rgba(184, 160, 64, 0.4);
+      }
+
+      .cidade-search-wrap {
+        position: relative;
+        width: 100%;
+      }
+      .cidade-search-input {
+        width: 100%;
+        padding: 12px 16px;
+        border: 1.5px solid var(--bege);
+        border-radius: 10px;
+        font-family: 'Lato', sans-serif;
+        font-size: 0.95rem;
+        color: var(--texto);
+        background: var(--branco);
+        box-sizing: border-box;
+        transition: border-color 0.2s;
+        outline: none;
+      }
+      .cidade-search-input:focus {
+        border-color: var(--ouro);
+      }
+      .cidade-dropdown {
+        display: none;
+        position: absolute;
+        top: calc(100% + 4px);
+        left: 0;
+        right: 0;
+        background: var(--branco);
+        border: 1.5px solid var(--bege);
+        border-radius: 10px;
+        max-height: 200px;
+        overflow-y: auto;
+        z-index: 1200;
+        list-style: none;
+        margin: 0;
+        padding: 4px 0;
+        box-shadow: 0 8px 24px rgba(0,0,0,0.1);
+      }
+      .cidade-dropdown.open  { display: block; }
+      .cidade-dropdown li {
+        padding: 10px 16px;
+        font-size: 0.92rem;
+        color: var(--texto);
+        cursor: pointer;
+        transition: background 0.15s;
+      }
+      .cidade-dropdown li:hover,
+      .cidade-dropdown li.active { background: var(--creme); color: var(--verde); }
+      .cidade-no-result {
+        padding: 10px 16px;
+        color: var(--texto-leve);
+        font-style: italic;
+        cursor: default;
+      }
     </style>
   </head>
   <body>
@@ -1786,103 +1860,20 @@
     <!-- ── MÍDIA ── -->
     <section id="midia">
       <div class="container">
-        <div class="reveal">
+        <div class="reveal cta-boticario">
           <div class="section-label">Página 10</div>
-          <h2 class="section-title">Materiais<br />&amp; Mídia</h2>
+          <h2 class="section-title">Ainda não é<br>revendedor<br>Boticário?</h2>
           <p class="section-desc">
-            Acesse os materiais de apoio disponíveis para sua jornada como
-            revendedor.
+            Faça parte da maior rede de revendedores do Brasil e comece
+            a transformar seu tempo em resultado.
           </p>
-        </div>
-        <div class="midia-grid reveal">
-          <!-- Card 1: Cartilha Revendedor Boticario -->
           <a
-            class="midia-card"
-            href="midia/cartilha-revendedor-boticario.pdf"
+            href="https://revendedores.grupoboticario.com.br/boticario?utm_source=Google&utm_medium=cpc&utm_campaign=OBoticario-Interno-AlwaysOn-IR-Conversao-Google-Leads-PMAX-NA&utm_content=All-Open-M_F_18+-18_65-BR-All-Display-&utm_term=NA-NA-Pmax-Variado-Responsivo-NA-NA-MonoMulti-V1-2026-&gclsrc=aw.ds&gad_source=1&gad_campaignid=23709691104&gclid=Cj0KCQjw_IXQBhCkARIsADqELbKs1RPwhqgXT_teZwvsRA-9FQ_c-MfhCb2o7x9bQ6MQ6OQuUbWlFhoaApmmEALw_wcB"
             target="_blank"
             rel="noopener noreferrer"
+            class="hero-cta cta-boticario-btn"
           >
-            <div class="midia-thumb">
-              <img
-                src="midia/PDFpics/Image1.jpeg"
-                alt="Cartilha Revendedor Boticario"
-                class="midia-thumb-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="midia-info">
-              <span class="midia-tag">PDF</span>
-              <h4 class="midia-title">Cartilha Revendedor Boticario</h4>
-              <span class="midia-cta">Abrir documento ↗</span>
-            </div>
-          </a>
-
-          <!-- Card 2: Bem-Vindo(a) à Venda Direta do Grupo Boticario -->
-          <a
-            class="midia-card"
-            href="midia/bem-vinda-venda-direta-grupo-boticario.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="midia-thumb">
-              <img
-                src="midia/PDFpics/Image2.jpeg"
-                alt="Bem-Vindo(a) à Venda Direta do Grupo Boticario"
-                class="midia-thumb-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="midia-info">
-              <span class="midia-tag">PDF</span>
-              <h4 class="midia-title">
-                Bem-Vindo(a) à Venda Direta do Grupo Boticario
-              </h4>
-              <span class="midia-cta">Abrir documento ↗</span>
-            </div>
-          </a>
-
-          <!-- Card 3: Guia de Sucesso Grupo Boticário -->
-          <a
-            class="midia-card"
-            href="midia/guia-de-sucesso-grupo-boticario.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="midia-thumb">
-              <img
-                src="midia/PDFpics/Image3.jpeg"
-                alt="Guia de Sucesso Grupo Boticário"
-                class="midia-thumb-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="midia-info">
-              <span class="midia-tag">PDF</span>
-              <h4 class="midia-title">Guia de Sucesso Grupo Boticário</h4>
-              <span class="midia-cta">Abrir documento ↗</span>
-            </div>
-          </a>
-
-          <!-- Card 4: Guia de Sucesso Multimarcas -->
-          <a
-            class="midia-card"
-            href="midia/guia-de-sucesso-multimarcas.pdf"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            <div class="midia-thumb">
-              <img
-                src="midia/PDFpics/Image4.jpeg"
-                alt="Guia de Sucesso Multimarcas"
-                class="midia-thumb-img"
-                loading="lazy"
-              />
-            </div>
-            <div class="midia-info">
-              <span class="midia-tag">PDF</span>
-              <h4 class="midia-title">Guia de Sucesso Multimarcas</h4>
-              <span class="midia-cta">Abrir documento ↗</span>
-            </div>
+            Quero ser revendedor →
           </a>
         </div>
       </div>
@@ -2027,17 +2018,20 @@
           </div>
           <div class="form-group">
             <label for="wppCidade">Cidade</label>
-            <select id="wppCidade" name="cidade" required>
-              <option value="" disabled selected>Selecione sua cidade</option>
-              <option value="Terra Rica">Terra Rica</option>
-              <option value="Goioerê">Goioerê</option>
-              <option value="Umuarama">Umuarama</option>
-              <option value="Paranavaí">Paranavaí</option>
-              <option value="Paiçandu">Paiçandu</option>
-              <option value="Mandaguaçu">Mandaguaçu</option>
-              <option value="Marialva">Marialva</option>
-              <option value="Mandaguari">Mandaguari</option>
-            </select>
+            <div class="cidade-search-wrap">
+              <input
+                type="text"
+                id="wppCidade"
+                class="cidade-search-input"
+                placeholder="Digite o nome da sua cidade..."
+                autocomplete="off"
+                aria-label="Cidade"
+                aria-expanded="false"
+                aria-autocomplete="list"
+                role="combobox"
+              >
+              <ul class="cidade-dropdown" id="cidadeDropdown" role="listbox"></ul>
+            </div>
           </div>
           <div class="form-group">
             <label for="wppObs"
@@ -2119,14 +2113,109 @@
 
       // ── MODAL WHATSAPP ──
       const cidadeWhatsApp = {
-        "Terra Rica":   "5544991572821",
-        "Goioerê":      "5544999745241",
-        "Umuarama":     "5544988213022",
-        "Paranavaí":    ["5544991751885", "5544988163174"],
-        "Paiçandu":     "5544984331268",
-        "Mandaguaçu":   "5544999489021",
-        "Marialva":     "5544999254954",
-        "Mandaguari":   "5544984334721"
+        "Água Boa":                 "5544984331268",
+        "Alto Paraíso":             "5544991751885",
+        "Alto Paraná":              "5544991572821",
+        "Alto Piquiri":             "5544991751885",
+        "Altônia":                  "5544988163174",
+        "Alvorada do Sul":          "5544988452899",
+        "Amaporã":                  "5544991572821",
+        "Ângulo":                   "5544988452701",
+        "Astorga":                  "5544988453860",
+        "Barbosa":                  "5544984334721",
+        "Boa Esperança":            "5544999745241",
+        "Bom Sucesso":              "5544984334721",
+        "Cafeara":                  "5543999323704",
+        "Cafezal do Sul":           "5544991751885",
+        "Centenário do Sul":        "5543999323704",
+        "Cianorte":                 "5544988133872",
+        "Cidade Gaúcha":            "5544988453721",
+        "Colorado":                 "5544988452899",
+        "Corumbataí":               "5544984334721",
+        "Cruzeiro do Oeste":        "5544988163174",
+        "Cruzeiro do Sul":          "5544988452899",
+        "Diamante":                 "5544984330545",
+        "Douradina":                "5544988163174",
+        "Dr. Camargo":              "5544984331268",
+        "Eliza":                    "5544991751885",
+        "Esperança Nova":           "5544991751885",
+        "Farol":                    "5544999745241",
+        "Fênix":                    "5544984334721",
+        "Florestópolis":            "5543999323704",
+        "Goioerê":                  "5544999745241",
+        "Graciosa":                 "5544988130881",
+        "Guairaça":                 "5544991572821",
+        "Guaporema":                "5544988453721",
+        "Herculândia":              "5544988163174",
+        "Icaraíma":                 "5544988163174",
+        "Iguaraçu":                 "5544988452701",
+        "Inajá":                    "5544988452899",
+        "Indianópolis":             "5544988453721",
+        "Iporã":                    "5544991751885",
+        "Itaguajé":                 "5544988452899",
+        "Itaúna do Sul":            "5544984330545",
+        "Ivaté":                    "5544988163174",
+        "Ivatuba":                  "5544984331268",
+        "Janiópolis":               "5544999745241",
+        "Japurã":                   "5544988453721",
+        "Jardim Olinda":            "5544988452899",
+        "Loanda":                   "5544984330545",
+        "Lobato":                   "5544988452701",
+        "Lupionópolis":             "5543999323704",
+        "Mamborê":                  "5544999745241",
+        "Mandaguaçu":               "5544999489021",
+        "Mandiocaba":               "5544988130881",
+        "Maria Helena":             "5544991751885",
+        "Marialva":                 "5544999254954",
+        "Marilena":                 "5544984330545",
+        "Mariluz":                  "5544999745241",
+        "Maristela":                "5544991572821",
+        "Mirador":                  "5544988453721",
+        "Miraselva":                "5543999323704",
+        "Moreira Sales":            "5544999745241",
+        "Munhoz de Melo":           "5544988452701",
+        "Nossa Senhora das Graças": "5544988452899",
+        "Nova Aliança":             "5544988453721",
+        "Nova Londrina":            "5544984330545",
+        "Nova Olímpia":             "5544988163174",
+        "Ourizona":                 "5544984331268",
+        "Paiçandu":                 "5544984331268",
+        "Paraíso do Norte":         "5544988453721",
+        "Paranapoema":              "5544988452899",
+        "Paranavaí":                "5544988130881",
+        "Perobal":                  "5544991751885",
+        "Pérola":                   "5544988163174",
+        "Piracema":                 "5544988130881",
+        "Pitangueiras":             "5544988452701",
+        "Planaltina":               "5544991572821",
+        "Porecatu":                 "5543999323704",
+        "Porto Rico":               "5544984330545",
+        "Quarto Centenário":        "5544999745241",
+        "Querência do Norte":       "5544984330545",
+        "Rancho Alegre do Oeste":   "5544999745241",
+        "Rondon":                   "5544988453721",
+        "Santa Cruz":               "5544984330545",
+        "Santa Fé":                 "5544988452701",
+        "Santa Inês":               "5544988452899",
+        "Santa Isabel":             "5544991572821",
+        "Santa Mônica":             "5544991572821",
+        "Santo Antônio do Caiuá":   "5544991572821",
+        "Santo Inácio":             "5544988452899",
+        "São Carlos do Ivaí":       "5544988453721",
+        "São Jorge":                "5544984331268",
+        "São Jorge do Patrocínio":  "5544991751885",
+        "São João do Caiuá":        "5544991572821",
+        "São Manoel":               "5544988453721",
+        "São Pedro do Ivaí":        "5544984334721",
+        "São Pedro do Paraná":      "5544984330545",
+        "São Tomé":                 "5544988453721",
+        "Tamboara":                 "5544988453721",
+        "Tapejara":                 "5544991751885",
+        "Tapira":                   "5544991751885",
+        "Terra Rica":               "5544991572821",
+        "Tuneiras do Oeste":        "5544988163174",
+        "Umuarama":                 "5544988213022",
+        "Xambrê":                   "5544991751885"
       };
 
       const modalWpp = document.getElementById("modalWpp");
@@ -2183,21 +2272,117 @@
         e.preventDefault();
         const nome = document.getElementById("wppNome").value.trim();
         const contato = document.getElementById("wppContato").value.trim();
-        const cidade = document.getElementById("wppCidade").value;
+        const cidade = document.getElementById('wppCidade').value.trim();
+        if (!cidadeWhatsApp[cidade]) {
+          const inp = document.getElementById('wppCidade');
+          inp.style.borderColor = 'var(--ouro)';
+          inp.focus();
+          return;
+        }
+        document.getElementById('wppCidade').style.borderColor = '';
         const obs = document.getElementById("wppObs").value.trim();
 
-        if (!nome || !contato || !cidade) return;
+        if (!nome || !contato) return;
 
         const mensagem = `Olá! Vim pela Cartilha do Revendedor 📋\nNome: ${nome}\nContato: ${contato}\nCidade: ${cidade}${obs ? "\nObservação: " + obs : ""}`;
-        const entrada = cidadeWhatsApp[cidade];
-        const numero = Array.isArray(entrada)
-          ? entrada[Math.floor(Math.random() * entrada.length)]
-          : entrada;
+        const numero = cidadeWhatsApp[cidade];
         const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensagem)}`;
 
         window.open(url, "_blank", "noopener,noreferrer");
         fecharModal();
       });
+
+      (function () {
+        const input  = document.getElementById('wppCidade');
+        const list   = document.getElementById('cidadeDropdown');
+        if (!input || !list) return;
+
+        const cities = Object.keys(cidadeWhatsApp).sort((a, b) =>
+          a.localeCompare(b, 'pt-BR')
+        );
+
+        function normalize(str) {
+          return str.normalize('NFD')
+            .replace(/[̀-ͯ]/g, '')
+            .toLowerCase();
+        }
+
+        function renderList(filter) {
+          const q = normalize(filter);
+          const matches = q.length === 0
+            ? cities
+            : cities.filter(c => normalize(c).includes(q));
+
+          list.innerHTML = '';
+          if (matches.length === 0) {
+            list.innerHTML =
+              '<li class="cidade-no-result">Nenhuma cidade encontrada</li>';
+          } else {
+            matches.forEach(city => {
+              const li = document.createElement('li');
+              li.textContent = city;
+              li.setAttribute('role', 'option');
+              li.addEventListener('mousedown', e => {
+                e.preventDefault();
+                selectCity(city);
+              });
+              list.appendChild(li);
+            });
+          }
+          list.classList.add('open');
+          input.setAttribute('aria-expanded', 'true');
+        }
+
+        function selectCity(city) {
+          input.value = city;
+          input.dataset.value = city;
+          list.classList.remove('open');
+          input.setAttribute('aria-expanded', 'false');
+        }
+
+        function closeList() {
+          list.classList.remove('open');
+          input.setAttribute('aria-expanded', 'false');
+          if (!cidadeWhatsApp[input.value]) {
+            input.value = '';
+            input.dataset.value = '';
+          }
+        }
+
+        input.addEventListener('focus', () => renderList(input.value));
+        input.addEventListener('input', () => {
+          input.dataset.value = '';
+          renderList(input.value);
+        });
+        input.addEventListener('blur', () => setTimeout(closeList, 150));
+
+        input.addEventListener('keydown', function (e) {
+          const items = list.querySelectorAll(
+            'li:not(.cidade-no-result)'
+          );
+          const active = list.querySelector('li.active');
+          let idx = Array.from(items).indexOf(active);
+
+          if (e.key === 'ArrowDown') {
+            e.preventDefault();
+            idx = idx < items.length - 1 ? idx + 1 : 0;
+            items.forEach(i => i.classList.remove('active'));
+            items[idx]?.classList.add('active');
+            items[idx]?.scrollIntoView({ block: 'nearest' });
+          } else if (e.key === 'ArrowUp') {
+            e.preventDefault();
+            idx = idx > 0 ? idx - 1 : items.length - 1;
+            items.forEach(i => i.classList.remove('active'));
+            items[idx]?.classList.add('active');
+            items[idx]?.scrollIntoView({ block: 'nearest' });
+          } else if (e.key === 'Enter') {
+            e.preventDefault();
+            if (active) selectCity(active.textContent);
+          } else if (e.key === 'Escape') {
+            closeList();
+          }
+        });
+      })();
     </script>
   </body>
 </html>
