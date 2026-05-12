@@ -136,6 +136,28 @@
         box-shadow: 0 12px 32px rgba(201, 168, 76, 0.35);
       }
 
+      .hero-btns {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .hero-cta--ghost {
+        background: transparent;
+        color: var(--ouro);
+        border: 2px solid var(--ouro);
+        box-shadow: none;
+      }
+
+      .hero-cta--ghost:hover {
+        background: var(--ouro);
+        color: var(--verde);
+        transform: translateY(-2px);
+        box-shadow: 0 12px 32px rgba(184,160,64,0.3);
+      }
+
       .scroll-hint {
         z-index: 0;
         position: absolute;
@@ -640,7 +662,7 @@
 
       /* ── APOIO (final) ── */
       #apoio {
-        background: var(--verde);
+        background: #1B2847;
         text-align: center;
         flex-direction: column;
         gap: 0;
@@ -966,7 +988,16 @@
 
       /* ── MÍDIA ── */
       #midia {
-        background: var(--creme);
+        background: var(--verde-med);
+      }
+      #midia .section-title {
+        color: var(--branco);
+      }
+      #midia .section-desc {
+        color: rgba(255, 255, 255, 0.75);
+      }
+      #midia .section-label {
+        color: var(--ouro);
       }
 
       .midia-grid {
@@ -1276,8 +1307,8 @@
       <a href="#dicas" title="Dicas"></a>
       <a href="#lucros" title="Lucros"></a>
       <a href="#organizacao" title="Organização"></a>
-      <a href="#midia" title="Materiais & Mídia"></a>
       <a href="#apoio" title="Apoio"></a>
+      <a href="#midia" title="Materiais & Mídia"></a>
     </nav>
 
     <!-- ── HERO ── -->
@@ -1293,7 +1324,14 @@
         Esta cartilha foi criada para te apresentar, de forma simples, como
         funciona a revenda e te apoiar nos primeiros passos.
       </p>
-      <a href="#marcas" class="hero-cta">Começar agora →</a>
+      <div class="hero-btns">
+        <a href="#midia" class="hero-cta hero-cta--ghost">
+          Ainda não é revendedor?
+        </a>
+        <a href="#marcas" class="hero-cta">
+          Começar agora →
+        </a>
+      </div>
       <div class="scroll-hint">Role para baixo <span></span></div>
     </section>
 
@@ -1857,32 +1895,10 @@
       </div>
     </section>
 
-    <!-- ── MÍDIA ── -->
-    <section id="midia">
-      <div class="container">
-        <div class="reveal cta-boticario">
-          <div class="section-label">Página 10</div>
-          <h2 class="section-title">Ainda não é<br>revendedor<br>Boticário?</h2>
-          <p class="section-desc">
-            Faça parte da maior rede de revendedores do Brasil e comece
-            a transformar seu tempo em resultado.
-          </p>
-          <a
-            href="https://revendedores.grupoboticario.com.br/boticario?utm_source=Google&utm_medium=cpc&utm_campaign=OBoticario-Interno-AlwaysOn-IR-Conversao-Google-Leads-PMAX-NA&utm_content=All-Open-M_F_18+-18_65-BR-All-Display-&utm_term=NA-NA-Pmax-Variado-Responsivo-NA-NA-MonoMulti-V1-2026-&gclsrc=aw.ds&gad_source=1&gad_campaignid=23709691104&gclid=Cj0KCQjw_IXQBhCkARIsADqELbKs1RPwhqgXT_teZwvsRA-9FQ_c-MfhCb2o7x9bQ6MQ6OQuUbWlFhoaApmmEALw_wcB"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="hero-cta cta-boticario-btn"
-          >
-            Quero ser revendedor →
-          </a>
-        </div>
-      </div>
-    </section>
-
     <!-- ── APOIO ── -->
     <section id="apoio">
       <div class="container">
-        <div class="section-label">Página 11</div>
+        <div class="section-label">Página 10</div>
         <h2 class="section-title">Onde buscar<br />apoio</h2>
         <p class="section-desc">Você nunca está sozinho(a) nessa jornada.</p>
         <div class="apoio-cards reveal">
@@ -1975,6 +1991,28 @@
               Ir para o WhatsApp
             </button>
           </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ── MÍDIA ── -->
+    <section id="midia">
+      <div class="container">
+        <div class="reveal cta-boticario">
+          <div class="section-label">Página 11</div>
+          <h2 class="section-title">Como se tornar<br>um revendedor</h2>
+          <p class="section-desc">
+            Faça parte da maior rede de revendedores do Brasil e comece
+            a transformar seu tempo em resultado.
+          </p>
+          <a
+            href="https://revendedores.grupoboticario.com.br/boticario?utm_source=Google&utm_medium=cpc&utm_campaign=OBoticario-Interno-AlwaysOn-IR-Conversao-Google-Leads-PMAX-NA&utm_content=All-Open-M_F_18+-18_65-BR-All-Display-&utm_term=NA-NA-Pmax-Variado-Responsivo-NA-NA-MonoMulti-V1-2026-&gclsrc=aw.ds&gad_source=1&gad_campaignid=23709691104&gclid=Cj0KCQjw_IXQBhCkARIsADqELbKs1RPwhqgXT_teZwvsRA-9FQ_c-MfhCb2o7x9bQ6MQ6OQuUbWlFhoaApmmEALw_wcB"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="hero-cta cta-boticario-btn"
+          >
+            Quero ser revendedor →
+          </a>
         </div>
       </div>
     </section>
